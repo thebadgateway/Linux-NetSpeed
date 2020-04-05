@@ -334,35 +334,35 @@ Update_Shell(){
 #开始菜单
 start_menu(){
 clear
-echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
+echo && echo -e " TCP acceleration One-click installation management script ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   -- 就是爱生活 | 94ish.me --
   
- ${Green_font_prefix}0.${Font_color_suffix} 升级脚本
+ ${Green_font_prefix}0.${Font_color_suffix} Update_Shell
 ————————————内核管理————————————
- ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR/BBR魔改版内核
- ${Green_font_prefix}2.${Font_color_suffix} 安装 BBRplus版内核 
- ${Green_font_prefix}3.${Font_color_suffix} 安装 Lotserver(锐速)内核
+ ${Green_font_prefix}1.${Font_color_suffix} Install BBR / BBR magically modified kernel
+ ${Green_font_prefix}2.${Font_color_suffix} Install BBRplus kernel 
+ ${Green_font_prefix}3.${Font_color_suffix} Install Lotserver kernel
 ————————————加速管理————————————
- ${Green_font_prefix}4.${Font_color_suffix} 使用BBR加速
- ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速
- ${Green_font_prefix}6.${Font_color_suffix} 使用暴力BBR魔改版加速(不支持部分系统)
- ${Green_font_prefix}7.${Font_color_suffix} 使用BBRplus版加速
- ${Green_font_prefix}8.${Font_color_suffix} 使用Lotserver(锐速)加速
+ ${Green_font_prefix}4.${Font_color_suffix} Use BBR acceleration
+ ${Green_font_prefix}5.${Font_color_suffix} Speed up with BBR magic revision
+ ${Green_font_prefix}6.${Font_color_suffix} Use violent BBR magic revision acceleration (some systems are not supported)
+ ${Green_font_prefix}7.${Font_color_suffix} Use BBRplus version to accelerate
+ ${Green_font_prefix}8.${Font_color_suffix} Speed up with Lotserver
 ————————————杂项管理————————————
- ${Green_font_prefix}9.${Font_color_suffix} 卸载全部加速
- ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
- ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
+ ${Green_font_prefix}9.${Font_color_suffix} Remove all acceleration
+ ${Green_font_prefix}10.${Font_color_suffix} System configuration optimization
+ ${Green_font_prefix}11.${Font_color_suffix} Exit script
 ————————————————————————————————" && echo
 
 	check_status
 	if [[ ${kernel_status} == "noinstall" ]]; then
-		echo -e " 当前状态: ${Green_font_prefix}未安装${Font_color_suffix} 加速内核 ${Red_font_prefix}请先安装内核${Font_color_suffix}"
+		echo -e " Current status: ${Green_font_prefix}Not Installed${Font_color_suffix} Accelerated kernel ${Red_font_prefix}Please install the kernel first${Font_color_suffix}"
 	else
-		echo -e " 当前状态: ${Green_font_prefix}已安装${Font_color_suffix} ${_font_prefix}${kernel_status}${Font_color_suffix} 加速内核 , ${Green_font_prefix}${run_status}${Font_color_suffix}"
+		echo -e " Current status: ${Green_font_prefix}Installed${Font_color_suffix} ${_font_prefix}${kernel_status}${Font_color_suffix} Accelerated kernel , ${Green_font_prefix}${run_status}${Font_color_suffix}"
 		
 	fi
 echo
-read -p " 请输入数字 [0-11]:" num
+read -p " Please key in numbers [0-11]:" num
 case "$num" in
 	0)
 	Update_Shell
