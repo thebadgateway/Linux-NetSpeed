@@ -61,10 +61,10 @@ installbbrplus(){
 		kernel_version="4.14.129_bbrplus" #fix a bug
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
-		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
-		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-image-${kernel_version}.deb
-		dpkg -i linux-headers-${kernel_version}.deb
-		dpkg -i linux-image-${kernel_version}.deb
+		wget -N --no-check-certificate https://github.com/UJX6N/bbrplus/releases/download/4.14.187-bbrplus/linux-headers-4.14.187-bbrplus_4.14.187-bbrplus-1_amd64.deb
+		wget -N --no-check-certificate https://github.com/UJX6N/bbrplus/releases/download/4.14.187-bbrplus/linux-image-4.14.187-bbrplus_4.14.187-bbrplus-1_amd64.deb
+		dpkg -i linux-headers-4.14.187-bbrplus_4.14.187-bbrplus-1_amd64.deb
+		dpkg -i linux-image-4.14.187-bbrplus_4.14.187-bbrplus-1_amd64.deb
 		cd .. && rm -rf bbrplus
 	fi
 	detele_kernel
